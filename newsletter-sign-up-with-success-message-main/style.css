@@ -1,0 +1,143 @@
+:root {
+  --clr-primary-500: hsl(4, 100%, 67%);
+
+  --clr-neutral-900: hsl(234, 29%, 20%);
+  --clr-neutral-700: hsl(235, 18%, 26%);
+  --clr-neutral-500: hsl(231, 7%, 60%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff: "Roboto", "sans-serif";
+  --fw-300: 300;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fs: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+image,
+svg {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.right {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff);
+  font-size: var(--fs);
+  line-height: 1;
+}
+
+.container,
+.success {
+  padding: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap, 1rem);
+}
+
+.left {
+  display: grid;
+  margin: 1rem 1rem;
+  gap: var(--gap, 1rem);
+}
+.left p {
+  line-height: 1.5;
+}
+.left h1 {
+  font-weight: var(--fw-700);
+  font-size: 2.5rem;
+}
+
+.left ul li {
+  list-style: none;
+  padding-block: 0.5rem;
+}
+
+li {
+  display: flex;
+  gap: 1rem;
+}
+
+.email {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.email label h3 {
+  font-size: 1rem;
+}
+
+.email input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--clr-neutral-500);
+}
+
+button {
+  padding: 0.8rem;
+  color: var(--clr-neutral-100);
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--clr-neutral-900);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  margin-block: 1rem;
+}
+
+button:focus,
+input:focus,
+button:focus-visible {
+  outline: 2px solid var(--clr-primary-500);
+}
+
+.success {
+  --gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.success h1 {
+  width: 10ch;
+  font-weight: var(--fw-700);
+  font-size: 3rem;
+  margin-block-end: 0.5rem;
+}
+
+.success p {
+  margin-block-end: 5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 664px) {
+  .destop-image {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 665px) {
+  .mobile-image {
+    display: none !important;
+  }
+  .container {
+    grid-template-columns: 20rem 20rem;
+    gap: 4rem;
+  }
+}
